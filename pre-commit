@@ -1,0 +1,6 @@
+#!/bin/sh
+black --check .
+if [ $? -ne 0 ]; then
+   echo 'Commit rejected. Run `black .` to fix styling issues.'
+   exit 1
+fi
